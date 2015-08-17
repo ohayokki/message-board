@@ -16,6 +16,7 @@
   <%= f.text_field :name %><br>
   年齢:<br>
   <%= f.text_field :age %><br>
+  <%= f.select :age, options_for_select((5..100).map{|num| ["#{num}歳", num]}, selected: "20") %>
   内容:<br>
   <%= text_area :message, :body, :size => "25x5" %><br>
   <%= f.submit class: "btn btn-sm btn-primary" %>
